@@ -930,3 +930,58 @@ int fl(int a, int b) { return(a>b?a:b); }
 - [ ] the smaller value of the two passed parameters
 - [ ] runtime error
 - [x] the greater value of the two passed parameters
+
+
+#### Q62. If * indicates a pointer or reference variable, what does ** indicate?
+- [x] pointer to a pointer
+- [ ] static pointer
+- [ ] auto pointer
+- [ ] constant pointer
+
+#### Q63. A linked list structure node is defined in lines 1 through 5 below. What is wrong with the recursive implementation in lines 6 through 10?
+```c
+    struct node
+    {
+        int number;
+        struct node *next;
+    };
+    void printALL(struct node *node)
+    {
+        printf("%d", node->number);
+        printALL(node->next);
+    }
+```
+- [ ] The recursive function does have a terminating condition, therefore it will not stop at the end of the list, resulting in memory errors
+- [ ] The %d in the printf() format string will not work if the numbers inside the nodes are too big
+- [ ] The member next in the structure shult not be a pointer
+- [x] There is a syntax error in node->nuber and node->next. The correct statements are node.number and node.next
+
+#### Q64. An array is a collection of ___ of the same ___.
+- [ ] literials; definition
+- [ ] strings; format
+- [x] elements; type
+- [ ] object; size
+
+#### Q65. What does this program return?
+```c
+int main()
+{
+  int a = 0, b=2, c=4, d=8;
+  int x=a;
+  if(d/c<=b || b/a == a) x=b;
+  else x=c;
+  return(x);
+}
+```
+
+- [ ] 4
+- [x] 2
+- [ ] code dump
+- [ ] 0
+
+
+#### Q66. What is the difference between the printf() and fprintf() functions?
+- [ ] The printf() function prints out input from the keyboard device; the fprintf() function prints out file contents
+- [ ] The printf() function prints on the standard outputs stream stdout; the fprintf() function prints to the specifed stream.
+- [ ] The printf() function prints out specified information to the screen; fprintf() function prints out filtered information to the printer
+- [ ] The printf() function prints general output; the fprintf() function prints formatted data
